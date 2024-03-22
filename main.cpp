@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <bits/stdc++.h>
+#include <algorithm>
 using namespace std;
 // 12/26 セクション3-2文字と数値の出力まで
 // 12/27 セクション3-6小数を扱う方法まで　次回セクション4変数
@@ -31,5 +32,16 @@ int sample(){
   if(s[2] == '1')
     count++;
   cout << count << "\n";
+  return 0;
+}
+
+int sample2(){
+  string s;
+  cin >> s;
+  int length = s.size();
+  if(s.at(0) == '<' && s.at(length-1) == '>' && count(s.begin()+1,s.end()-1, '='))
+    cout << "Yes" << "\n";
+  else
+    cout << "No" << "\n";
   return 0;
 }

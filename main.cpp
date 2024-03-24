@@ -14,35 +14,16 @@ using namespace std;
 // 2/15 セクション8配列　終了　次回セクション9　ポインタ
 // 3/23　セクション9ポインタ　終了　次回セクション10　構造体
 
-int main(void){
-  int apple = 10;
-  int *p;
-  p = &apple;
-  printf("%d\n",*p);
+typedef struct {
+  int apple;
+  int orange;
+  int banana;
+}Fruits;
+
+int main(){
+  Fruits store;
+  store.apple = 1000;
+  cout << "リンゴの金額:" << store.apple << "\n";
   return 0;
 }
 
-int sample(){
-  string s;
-  cin >> s;
-  int count = 0;
-  if(s[0] == '1')
-    count++;
-  if(s[1] == '1')
-    count++;
-  if(s[2] == '1')
-    count++;
-  cout << count << "\n";
-  return 0;
-}
-
-int sample2(){
-  string s;
-  cin >> s;
-  int length = s.size();
-  if(s.at(0) == '<' && s.at(length-1) == '>' && count(s.begin()+1,s.end()-1, '='))
-    cout << "Yes" << "\n";
-  else
-    cout << "No" << "\n";
-  return 0;
-}

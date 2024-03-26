@@ -14,10 +14,10 @@ void show(Student x){
 }
 
 int main(){
-  Student kazuma;
-  kazuma.num = 10;
+  Student hana;
+  hana.num = 10;
   Student *p;
-  p = &kazuma;
+  p = &hana;
   cout << p->num << "\n";
   return 0;
 }

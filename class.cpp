@@ -1,14 +1,23 @@
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
+// クラス終了 3/26
+// 次回　カプセル化
 
-struct Student{
-  int year;
-  int num;
+class Student {
+  public:
+    int num;
 };
 
+void show(Student x){
+  cout << x.num << "\n";
+}
+
 int main(){
-  struct Student kazuma;
-  kazuma.year = 10;
-  cout << kazuma.year << "\n";
+  Student kazuma;
+  kazuma.num = 10;
+  Student *p;
+  p = &kazuma;
+  cout << p->num << "\n";
   return 0;
 }

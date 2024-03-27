@@ -18,6 +18,6 @@ int main(){
   hana.num = 10;
   Student *p;
   p = &hana;
-  cout << p->num << "\n";
+  cout << (*p).num << "\n";
   return 0;
 }

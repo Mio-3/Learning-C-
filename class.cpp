@@ -9,16 +9,21 @@ class Student {
     int num;
   public:
     void setNum(int x);
+    int getNum();
 };
 
 void Student::setNum(int x){
   num = x;
-  cout << num << "\n";
 }
 
+int Student::getNum(){
+  return num;
+}
 
 int main(){
   Student hana;
-  hana.setNum(100);
+  hana.setNum(25);
+  int result = hana.getNum();
+  cout << result << "\n";
   return 0;
 }

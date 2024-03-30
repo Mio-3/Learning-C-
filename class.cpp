@@ -5,19 +5,20 @@ using namespace std;
 // 次回　カプセル化
 
 class Student {
-  public:
+  private:
     int num;
+  public:
+    void setNum(int x);
 };
 
-void show(Student x){
-  cout << x.num << "\n";
+void Student::setNum(int x){
+  num = x;
+  cout << num << "\n";
 }
+
 
 int main(){
   Student hana;
-  hana.num = 10;
-  Student *p;
-  p = &hana;
-  cout << (*p).num << "\n";
+  hana.setNum(100);
   return 0;
 }

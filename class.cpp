@@ -13,7 +13,11 @@ class Student {
 };
 
 void Student::setNum(int x){
-  num = x;
+  if(x > 0 && x < 100){
+    num = x;
+  } else {
+    num = 0;
+  }
 }
 
 int Student::getNum(){
@@ -22,8 +26,7 @@ int Student::getNum(){
 
 int main(){
   Student hana;
-  hana.setNum(25);
-  int result = hana.getNum();
-  cout << result << "\n";
+  hana.setNum(15);
+  cout << hana.getNum() << "\n";
   return 0;
 }

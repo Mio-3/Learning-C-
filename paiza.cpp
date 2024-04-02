@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// paizaラーニングの問題を解いた。
 
 int main(){
   int n;

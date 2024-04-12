@@ -7,6 +7,7 @@ using namespace std;
 class Student{
   public:
     int num;
+    int year;
     Student();
 };
 

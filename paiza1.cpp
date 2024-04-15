@@ -1,3 +1,4 @@
+// paizaラーニングの問題を解きました。
 #include <bits/stdc++.h>
 using namespace std;
 int main() {

@@ -2,17 +2,16 @@
 using namespace std;
 
 int main(){
-  int a,b,c,x;
-  cin >> a >> b >> c >> x;
+  string s;
+  cin >> s;
   int res = 0;
-  for(int i = 0;i <= a;i++){
-    for(int j = 0;j <= b;j++){
-      for(int k = 0;k <= c;k++){
-        int total = 500 * i + 100 + j + 50 * k;
-        if(total == x)
-          res++;
-      }
-    }
-  }
+  if(s[0] == '1')
+    res++;
+  if(s[1] == '1')
+    res++;
+  if(s[2] == '1')
+    res++;
+  return 0;
   cout << res << "\n";
+  return 0;
 }

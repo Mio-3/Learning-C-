@@ -1,17 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+int n;
+int a[210];
+
 int main(){
-  string s;
-  cin >> s;
+  cin >> n;
+  for(int i = 0;i < n;i++){
+    cin >> a[i];
+  }
   int res = 0;
-  if(s[0] == '1')
+  while(true){
+    bool exist_odd = false;
+    for(int i = 0;i < n;i++){
+      if(a[i] & 2 != 0)
+        exist_odd = true;
+    }
+    if(exist_odd)
+      break;
+    for(int i = 0;i < n;i++){
+      a[i] /= 2;
+    }
     res++;
-  if(s[1] == '1')
-    res++;
-  if(s[2] == '1')
-    res++;
-  return 0;
+  }
   cout << res << "\n";
-  return 0;
 }
